@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Cicur&#39;s Site</title>
-        <link>https://example.com/</link>
+        <link>https://cicur.github.io/</link>
         <description>Recent content on Cicur&#39;s Site</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 28 Feb 2022 17:22:28 +0800</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 28 Feb 2022 17:22:28 +0800</lastBuildDate><atom:link href="https://cicur.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Hello World</title>
-        <link>https://example.com/p/hello-world/</link>
+        <link>https://cicur.github.io/p/hello-world/</link>
         <pubDate>Mon, 28 Feb 2022 17:22:28 +0800</pubDate>
         
-        <guid>https://example.com/p/hello-world/</guid>
+        <guid>https://cicur.github.io/p/hello-world/</guid>
         <description>&lt;h1 id=&#34;hello-world&#34;&gt;Hello World&lt;/h1&gt;
 &lt;h2 id=&#34;english-test&#34;&gt;English test&lt;/h2&gt;
 &lt;p&gt;Text&lt;/p&gt;

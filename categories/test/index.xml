@@ -2,20 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>test on Cicur&#39;s Site</title>
-    <link>https://example.com/categories/test/</link>
+    <link>https://cicur.github.io/categories/test/</link>
     <description>Recent content in test on Cicur&#39;s Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Feb 2022 17:22:28 +0800</lastBuildDate><atom:link href="https://example.com/categories/test/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Feb 2022 17:22:28 +0800</lastBuildDate><atom:link href="https://cicur.github.io/categories/test/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello World</title>
-      <link>https://example.com/p/hello-world/</link>
+      <link>https://cicur.github.io/p/hello-world/</link>
       <pubDate>Mon, 28 Feb 2022 17:22:28 +0800</pubDate>
       
-      <guid>https://example.com/p/hello-world/</guid>
-      <description>Hello World English test Text
-中文测试 文本
-公式测试 Formula test $$a^2+b^2=c^2$$ 行内$E=mc^2$测试</description>
+      <guid>https://cicur.github.io/p/hello-world/</guid>
+      <description>Hello World English test Text 中文测试 文本 公式测试 Formula test $$a^2+b^2=c^2$$ 行内$E=mc^2$测试</description>
     </item>
     
   </channel>
