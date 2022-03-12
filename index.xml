@@ -17,6 +17,8 @@
 &lt;li&gt;支持 Markdown，&lt;a class=&#34;link&#34; href=&#34;https://katex.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Katex&lt;/a&gt; 公式&lt;/li&gt;
 &lt;li&gt;支持按语言的代码高亮&lt;/li&gt;
+&lt;li&gt;支持 &lt;a class=&#34;link&#34; href=&#34;https://cravatar.cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cravatar&lt;/a&gt; 头像&lt;/li&gt;
 &lt;li&gt;在昵称栏输入 QQ 号，可自动补全 QQ 昵称和 QQ 邮箱&lt;/li&gt;
 &lt;li&gt;填写数字 QQ 邮箱，可使用 QQ 头像作为评论头像&lt;/li&gt;
 &lt;li&gt;支持插入图片、表情，支持评论框粘贴图片&lt;/li&gt;
