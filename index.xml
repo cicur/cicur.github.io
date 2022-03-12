@@ -6,7 +6,27 @@
         <description>Recent content on Cicur&#39;s Site</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 02 Mar 2022 12:00:14 +0800</lastBuildDate><atom:link href="https://cicur.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 12 Mar 2022 15:13:48 +0800</lastBuildDate><atom:link href="https://cicur.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>New_comment</title>
+        <link>https://cicur.github.io/p/new_comment/</link>
+        <pubDate>Sat, 12 Mar 2022 15:13:48 +0800</pubDate>
+        
+        <guid>https://cicur.github.io/p/new_comment/</guid>
+        <description>&lt;p&gt;本站评论系统已由Gitalk更换为Twikoo。无需GitHub账号即可发表评论。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;支持 Markdown，&lt;a class=&#34;link&#34; href=&#34;https://katex.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Katex&lt;/a&gt; 公式&lt;/li&gt;
+&lt;li&gt;支持按语言的代码高亮&lt;/li&gt;
+&lt;li&gt;在昵称栏输入 QQ 号，可自动补全 QQ 昵称和 QQ 邮箱&lt;/li&gt;
+&lt;li&gt;填写数字 QQ 邮箱，可使用 QQ 头像作为评论头像&lt;/li&gt;
+&lt;li&gt;支持插入图片、表情，支持评论框粘贴图片&lt;/li&gt;
+&lt;li&gt;支持 &lt;!-- raw HTML omitted --&gt;Ctrl&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;Enter&lt;!-- raw HTML omitted --&gt; 快捷回复&lt;/li&gt;
+&lt;li&gt;评论框内容实时保存草稿，刷新不会丢失&lt;/li&gt;
+&lt;li&gt;支持回复、点赞&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>洛伦兹变换的简单推导</title>
         <link>https://cicur.github.io/p/%E6%B4%9B%E4%BC%A6%E5%85%B9%E5%8F%98%E6%8D%A2%E7%9A%84%E7%AE%80%E5%8D%95%E6%8E%A8%E5%AF%BC/</link>
         <pubDate>Wed, 02 Mar 2022 12:00:14 +0800</pubDate>
