@@ -5,7 +5,7 @@
     <link>https://cicur.github.io/tags/physics/</link>
     <description>Recent content in Physics on Cicur&#39;s Site</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-cn</language>
     <lastBuildDate>Wed, 02 Mar 2022 12:00:14 +0800</lastBuildDate><atom:link href="https://cicur.github.io/tags/physics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>洛伦兹变换的简单推导</title>
@@ -13,7 +13,7 @@
       <pubDate>Wed, 02 Mar 2022 12:00:14 +0800</pubDate>
       
       <guid>https://cicur.github.io/p/%E6%B4%9B%E4%BC%A6%E5%85%B9%E5%8F%98%E6%8D%A2%E7%9A%84%E7%AE%80%E5%8D%95%E6%8E%A8%E5%AF%BC/</guid>
-      <description>定义空间直角坐标系$K, K&#39;$，假设一个事件相对于$K$的$x, y, z, t$确定，两个坐标系的$x$轴保持一致。 首先考虑定位在$x$轴线上的事件</description>
+      <description>定义空间直角坐标系$K, K&amp;rsquo;$，假设一个事件相对于$K$的$x, y, z, t$确定，两个坐标系的$x$轴保持一致。 首先考虑定位在$x$</description>
     </item>
     
   </channel>
