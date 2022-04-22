@@ -94,6 +94,17 @@ $$x&amp;rsquo;^2+y&amp;rsquo;^2+z&amp;rsquo;^2-c^2t&amp;rsquo;^2=x^2 +y^2+z^2-&a
 </description>
         </item>
         <item>
+        <title>About</title>
+        <link>https://cicur.github.io/about/</link>
+        <pubDate>Tue, 01 Mar 2022 09:20:00 +0800</pubDate>
+        
+        <guid>https://cicur.github.io/about/</guid>
+        <description>&lt;h1 id=&#34;about&#34;&gt;About&lt;/h1&gt;
+&lt;p&gt;In solitude,&lt;br&gt;
+where we are least alone.&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Hello World</title>
         <link>https://cicur.github.io/p/hello-world/</link>
         <pubDate>Mon, 28 Feb 2022 17:22:28 +0800</pubDate>
@@ -108,6 +119,30 @@ $$x&amp;rsquo;^2+y&amp;rsquo;^2+z&amp;rsquo;^2-c^2t&amp;rsquo;^2=x^2 +y^2+z^2-&a
 &lt;p&gt;$$a^2+b^2=c^2$$
 行内$E=mc^2$测试&lt;/p&gt;
 </description>
+        </item>
+        <item>
+        <title>Archives</title>
+        <link>https://cicur.github.io/archives/</link>
+        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://cicur.github.io/archives/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Links</title>
+        <link>https://cicur.github.io/links/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://cicur.github.io/links/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Search</title>
+        <link>https://cicur.github.io/search/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://cicur.github.io/search/</guid>
+        <description></description>
         </item>
         
     </channel>

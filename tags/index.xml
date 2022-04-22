@@ -1,38 +1,35 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Tags on Cicur&#39;s Site</title>
-    <link>https://cicur.github.io/tags/</link>
-    <description>Recent content in Tags on Cicur&#39;s Site</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Sat, 12 Mar 2022 15:13:48 +0800</lastBuildDate><atom:link href="https://cicur.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Announcement</title>
-      <link>https://cicur.github.io/tags/announcement/</link>
-      <pubDate>Sat, 12 Mar 2022 15:13:48 +0800</pubDate>
-      
-      <guid>https://cicur.github.io/tags/announcement/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Physics</title>
-      <link>https://cicur.github.io/tags/physics/</link>
-      <pubDate>Wed, 02 Mar 2022 12:00:14 +0800</pubDate>
-      
-      <guid>https://cicur.github.io/tags/physics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Test</title>
-      <link>https://cicur.github.io/tags/test/</link>
-      <pubDate>Wed, 02 Mar 2022 12:00:14 +0800</pubDate>
-      
-      <guid>https://cicur.github.io/tags/test/</guid>
-      <description></description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>Tags on Cicur&#39;s Site</title>
+        <link>https://cicur.github.io/tags/</link>
+        <description>Recent content in Tags on Cicur&#39;s Site</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Sat, 12 Mar 2022 15:13:48 +0800</lastBuildDate><atom:link href="https://cicur.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Announcement</title>
+        <link>https://cicur.github.io/tags/announcement/</link>
+        <pubDate>Sat, 12 Mar 2022 15:13:48 +0800</pubDate>
+        
+        <guid>https://cicur.github.io/tags/announcement/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Physics</title>
+        <link>https://cicur.github.io/tags/physics/</link>
+        <pubDate>Wed, 02 Mar 2022 12:00:14 +0800</pubDate>
+        
+        <guid>https://cicur.github.io/tags/physics/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Test</title>
+        <link>https://cicur.github.io/tags/test/</link>
+        <pubDate>Wed, 02 Mar 2022 12:00:14 +0800</pubDate>
+        
+        <guid>https://cicur.github.io/tags/test/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
 </rss>

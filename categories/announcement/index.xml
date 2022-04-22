@@ -1,20 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Announcement on Cicur&#39;s Site</title>
-    <link>https://cicur.github.io/categories/announcement/</link>
-    <description>Recent content in Announcement on Cicur&#39;s Site</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Sat, 12 Mar 2022 15:13:48 +0800</lastBuildDate><atom:link href="https://cicur.github.io/categories/announcement/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>评论系统已更换</title>
-      <link>https://cicur.github.io/p/%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E5%B7%B2%E6%9B%B4%E6%8D%A2/</link>
-      <pubDate>Sat, 12 Mar 2022 15:13:48 +0800</pubDate>
-      
-      <guid>https://cicur.github.io/p/%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E5%B7%B2%E6%9B%B4%E6%8D%A2/</guid>
-      <description>本站评论系统已由Gitalk更换为Twikoo。无需GitHub账号即可发表评论。 支持 Markdown，Katex 公式 支持按语言的代码高亮 支</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>Announcement on Cicur&#39;s Site</title>
+        <link>https://cicur.github.io/categories/announcement/</link>
+        <description>Recent content in Announcement on Cicur&#39;s Site</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Sat, 12 Mar 2022 15:13:48 +0800</lastBuildDate><atom:link href="https://cicur.github.io/categories/announcement/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>评论系统已更换</title>
+        <link>https://cicur.github.io/p/%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E5%B7%B2%E6%9B%B4%E6%8D%A2/</link>
+        <pubDate>Sat, 12 Mar 2022 15:13:48 +0800</pubDate>
+        
+        <guid>https://cicur.github.io/p/%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E5%B7%B2%E6%9B%B4%E6%8D%A2/</guid>
+        <description>&lt;p&gt;本站评论系统已由Gitalk更换为Twikoo。无需GitHub账号即可发表评论。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;支持 Markdown，&lt;a class=&#34;link&#34; href=&#34;https://katex.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Katex&lt;/a&gt; 公式&lt;/li&gt;
+&lt;li&gt;支持按语言的代码高亮&lt;/li&gt;
+&lt;li&gt;支持 &lt;a class=&#34;link&#34; href=&#34;https://cravatar.cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cravatar&lt;/a&gt; 头像&lt;/li&gt;
+&lt;li&gt;在昵称栏输入 QQ 号，可自动补全 QQ 昵称和 QQ 邮箱&lt;/li&gt;
+&lt;li&gt;填写数字 QQ 邮箱，可使用 QQ 头像作为评论头像&lt;/li&gt;
+&lt;li&gt;支持插入图片、表情，支持评论框粘贴图片&lt;/li&gt;
+&lt;li&gt;支持 &lt;!-- raw HTML omitted --&gt;Ctrl&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;Enter&lt;!-- raw HTML omitted --&gt; 快捷回复&lt;/li&gt;
+&lt;li&gt;评论框内容实时保存草稿，刷新不会丢失&lt;/li&gt;
+&lt;li&gt;支持回复、点赞&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

@@ -1,29 +1,92 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Test on Cicur&#39;s Site</title>
-    <link>https://cicur.github.io/tags/test/</link>
-    <description>Recent content in Test on Cicur&#39;s Site</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Wed, 02 Mar 2022 12:00:14 +0800</lastBuildDate><atom:link href="https://cicur.github.io/tags/test/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>洛伦兹变换的简单推导</title>
-      <link>https://cicur.github.io/p/%E6%B4%9B%E4%BC%A6%E5%85%B9%E5%8F%98%E6%8D%A2%E7%9A%84%E7%AE%80%E5%8D%95%E6%8E%A8%E5%AF%BC/</link>
-      <pubDate>Wed, 02 Mar 2022 12:00:14 +0800</pubDate>
-      
-      <guid>https://cicur.github.io/p/%E6%B4%9B%E4%BC%A6%E5%85%B9%E5%8F%98%E6%8D%A2%E7%9A%84%E7%AE%80%E5%8D%95%E6%8E%A8%E5%AF%BC/</guid>
-      <description>定义空间直角坐标系$K, K&amp;rsquo;$，假设一个事件相对于$K$的$x, y, z, t$确定，两个坐标系的$x$轴保持一致。 首先考虑定位在$x$</description>
-    </item>
-    
-    <item>
-      <title>Hello World</title>
-      <link>https://cicur.github.io/p/hello-world/</link>
-      <pubDate>Mon, 28 Feb 2022 17:22:28 +0800</pubDate>
-      
-      <guid>https://cicur.github.io/p/hello-world/</guid>
-      <description>Hello World English test Text 中文测试 文本 公式测试 Formula test $$a^2+b^2=c^2$$ 行内$E=mc^2$测试</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>Test on Cicur&#39;s Site</title>
+        <link>https://cicur.github.io/tags/test/</link>
+        <description>Recent content in Test on Cicur&#39;s Site</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Wed, 02 Mar 2022 12:00:14 +0800</lastBuildDate><atom:link href="https://cicur.github.io/tags/test/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>洛伦兹变换的简单推导</title>
+        <link>https://cicur.github.io/p/%E6%B4%9B%E4%BC%A6%E5%85%B9%E5%8F%98%E6%8D%A2%E7%9A%84%E7%AE%80%E5%8D%95%E6%8E%A8%E5%AF%BC/</link>
+        <pubDate>Wed, 02 Mar 2022 12:00:14 +0800</pubDate>
+        
+        <guid>https://cicur.github.io/p/%E6%B4%9B%E4%BC%A6%E5%85%B9%E5%8F%98%E6%8D%A2%E7%9A%84%E7%AE%80%E5%8D%95%E6%8E%A8%E5%AF%BC/</guid>
+        <description>&lt;p&gt;定义空间直角坐标系$K, K&amp;rsquo;$，假设一个事件相对于$K$的$x, y, z, t$确定，两个坐标系的$x$轴保持一致。&lt;br&gt;
+首先考虑定位在$x$轴线上的事件。一个沿着$x$正半轴线传播的光信号，根据以下公式传播：
+$$x=ct$$
+或者
+$$x-ct=0 \tag{1}$$
+因为相同光信号相对$K&amp;rsquo;$的传播速度为$c$，所以相对于坐标系$K&amp;rsquo;$的传播可通过近似公式表示为
+$$x&amp;rsquo;-ct&amp;rsquo;=0 \tag{2}$$
+这些满足（1）式的时空点（事件）必然也满足（2）式。显然，在一般情况下，当条件满足时，关系为
+$$(x&amp;rsquo;-ct&amp;rsquo;)=\lambda(x-ct) \tag{3}$$
+式中，$\lambda$为一个常数；所以，根据（3）式，当$(x-ct)$等于零时，$(x&amp;rsquo;-ct&amp;rsquo;)$同样等于零。&lt;br&gt;
+如果把类似的方法运用到沿着$x$负半轴传播的光线中，我们可以得到条件
+$$(x&amp;rsquo;+ct&amp;rsquo;)=\mu(x+ct) \tag{4}$$
+通过将公式（3）和（4）相加（或相减），并为了方便用常数$a$和$b$代替常数$\lambda$和$\mu$，其中
+$$a=\frac {\lambda+\mu} 2$$
+而
+$$b=\frac {\lambda-\mu} 2$$
+我们可以得到公式
+$$\left. \begin{aligned} x&amp;rsquo;&amp;amp;=ax-bct \\ ct&amp;rsquo;&amp;amp;=act-bx \end{aligned} \right\} \tag{5}$$
+因此，如果常数$a$和$b$已知，我们就得到了问题的解决办法。这些结果来源于以下讨论。&lt;br&gt;
+对于坐标系$K&amp;rsquo;$的原点，永远都有$x&amp;rsquo;=0$，然后根据公式(5)中的第一个公式可得
+$$x=\frac {bc} a t$$
+如果我们把$K&amp;rsquo;$的原点相对于$K$移动的速度称为$v$,我们就得到
+$$v=\frac {bc} a \tag{6}$$
+如果我们计算出另一个$K&amp;rsquo;$上的点相对于$K$的速度，或者一个$K$的点相对于$K&amp;rsquo;$的速度（指向$x$负半轴），相同数值的$v$同样可以通过公式（5）得到。简而言之，我们可以把$v$指定为两个坐标系的相对速度。&lt;br&gt;
+此外，相对性原理告诉我们，一根相对于$K&amp;rsquo;$静止，从$K&amp;rsquo;$上测量的量杆的长度一定与一根相对于$K$静止，并从$K$上测量的量杆的长度相等。为了了解从$K$来观察时$x&amp;rsquo;$轴线上的点是什么样的，我们只需要从$K$照一个$K&amp;rsquo;$的“快照”；这意味着我们需要引入一个特定的$t$的值（$K$的时间），例如$t=0$。至于这个$t$值，我们可以从公式（5）的第一个公式获得
+$$x&amp;rsquo;=ax$$
+两个在$x&amp;rsquo;$轴线上分开的点，当在$K&amp;rsquo;$坐标系上测量时两点之间的距离为$\Delta x&amp;rsquo;=1$,因此两点在我们快照中的距离为
+$$\Delta x=\frac 1 a \tag{7}$$
+但是如果快照是从$K&amp;rsquo;(t&amp;rsquo;=0)$照的，并且如果我们消除公式（5）里的$t$，然后代人表达式（6）中计算，我们得到
+$$x&amp;rsquo;=a\Bigg(1-\frac {v^2} {c^2}\Bigg)x$$
+从中我们可以概括出两个在$x$轴线间隔距离为$1$（相对于K）的点在我们的快照中表示距离为
+$$\Delta x&amp;rsquo;=a\Bigg(1-\frac {v^2} {c^2}\Bigg) \tag{7a}$$
+但是，从上述所讨论的可知，这两个快照一定是完全相同的；所以（7）式中的$\Delta x$一定等于（7a）式中的$\Delta x&amp;rsquo;$，所以我们得出
+$$a^2=\frac 1 {1-\frac {v^2} {c^2}} \tag{7b}$$
+公式（6）和（7b）决定了常数$a$和$b$。把这些常数的值代人（5）式，我们得出&lt;br&gt;
+$$ \left. \begin{aligned} x&amp;rsquo;=\frac {x-vt} {\sqrt{1-\frac {v^2} {c^2}}} \\ t&amp;rsquo;=\frac {t-\frac v {c^2}x} {\sqrt{1-\frac {v^2} {c^2}}} \end{aligned} \right\} \tag{8} $$
+于是我们就得出了事件在$x$轴上的洛伦兹变换。它满足条件：
+$$x&amp;rsquo;^2-c^2t&amp;rsquo;^2=x^2-c^2t^2 \tag{8a}$$
+将这个结论加以扩展，要使其包含不在$x$轴上的事件，就要保留公式（8）并且补充相关关系式：
+$$ \left. \begin{aligned} y&amp;rsquo;&amp;amp;=y \\ z&amp;rsquo;&amp;amp;=z \end{aligned} \right\} \tag{9} $$
+以此方式我们就能满足对于任意方向的光线，光在真空中匀速传播的假设，无论是对于$K$参考系还是$K&amp;rsquo;$参考系。这一点会在下面将仔细说明。&lt;br&gt;
+我们假设一个光信号在时间$t=0$时从$K$的原点发出。它将会根据下列公式传播：
+$$r=\sqrt{x^2+y^2+z^2}=ct$$
+或者，如果将这个公式平方，就有：
+$$x^2+y^2+z^2-c^2t^2=0 \tag{10}$$
+这是被光的传播定律所要求的，结合相对论的假设，从$K&amp;rsquo;$的角度来看，问题中信号的传播应该与以下公式一致：
+$$r&amp;rsquo;=ct&amp;rsquo;$$
+或者
+$$x&amp;rsquo;^2+y&amp;rsquo;^2+z&amp;rsquo;^2-c^2t&amp;rsquo;^2=0 \tag{10a}$$
+为了使公式（10a）成为公式（10）的结论，我们必须让
+$$x&amp;rsquo;^2+y&amp;rsquo;^2+z&amp;rsquo;^2-c^2t&amp;rsquo;^2=\sigma(x^2+y^2+z^2-c^2t^2) \tag{11}$$
+因为公式（8a）必须适用于$x$轴线上的点，因此我们有$σ=1$。很容易看出，当$σ=1$时，洛伦兹变换满足公式（11）；因为（11）式由（8a）和（9）式所得，所以同样也可由（8）和（9）式变换而得。我们于是推导出了洛伦兹变换。&lt;br&gt;
+通过（8）和（9）式变换出的洛伦兹变换还需要进一步 普遍化概括。显然，我们所选择的$K&amp;rsquo;$的轴线是否在空间上与$K$的轴线平行，并不重要。$K&amp;rsquo;$相对于$K$的传播速度是否沿$x$轴方向也不是最重要的。通过简单的思考就可以得知，我们可以从两种变换来构造普遍意义的洛伦兹变换，这两种变换就是特殊意义下的洛伦兹变换和纯粹的空间变换，这也符合用一个轴线指向其他方向的新坐标系来代替原来的直角坐标系。&lt;br&gt;
+从数学的角度上看，我们可以这样表述概括了的洛伦兹变换：&lt;br&gt;
+它依照$x, y, z, t$的线性齐次函数来表示$x&amp;rsquo;, y&amp;rsquo;, z&amp;rsquo;, t&amp;rsquo;$，组成这样一个完全满足条件的关系式：
+$$x&amp;rsquo;^2+y&amp;rsquo;^2+z&amp;rsquo;^2-c^2t&amp;rsquo;^2=x^2 +y^2+z^2-&amp;rsquo;^2t^2 \tag{11a}$$
+这也就是说：如果我们用$x, y, z, t$替换表达式中的$x&amp;rsquo;, y&amp;rsquo;, z&amp;rsquo;, t&amp;rsquo;$，那么（11a）式的左边就与右边相等。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Hello World</title>
+        <link>https://cicur.github.io/p/hello-world/</link>
+        <pubDate>Mon, 28 Feb 2022 17:22:28 +0800</pubDate>
+        
+        <guid>https://cicur.github.io/p/hello-world/</guid>
+        <description>&lt;h1 id=&#34;hello-world&#34;&gt;Hello World&lt;/h1&gt;
+&lt;h2 id=&#34;english-test&#34;&gt;English test&lt;/h2&gt;
+&lt;p&gt;Text&lt;/p&gt;
+&lt;h2 id=&#34;中文测试&#34;&gt;中文测试&lt;/h2&gt;
+&lt;p&gt;文本&lt;/p&gt;
+&lt;h2 id=&#34;公式测试-formula-test&#34;&gt;公式测试 Formula test&lt;/h2&gt;
+&lt;p&gt;$$a^2+b^2=c^2$$
+行内$E=mc^2$测试&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>
