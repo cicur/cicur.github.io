@@ -22,7 +22,7 @@
 &lt;li&gt;在昵称栏输入 QQ 号，可自动补全 QQ 昵称和 QQ 邮箱&lt;/li&gt;
 &lt;li&gt;填写数字 QQ 邮箱，可使用 QQ 头像作为评论头像&lt;/li&gt;
 &lt;li&gt;支持插入图片、表情，支持评论框粘贴图片&lt;/li&gt;
-&lt;li&gt;支持 &lt;!-- raw HTML omitted --&gt;Ctrl&lt;!-- raw HTML omitted --&gt; + &lt;!-- raw HTML omitted --&gt;Enter&lt;!-- raw HTML omitted --&gt; 快捷回复&lt;/li&gt;
+&lt;li&gt;支持 &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;Enter&lt;/kbd&gt; 快捷回复&lt;/li&gt;
 &lt;li&gt;评论框内容实时保存草稿，刷新不会丢失&lt;/li&gt;
 &lt;li&gt;支持回复、点赞&lt;/li&gt;
 &lt;/ul&gt;
