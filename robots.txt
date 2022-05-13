@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /p/
+Allow: /about/
+Disallow: /search/
+Disallow: /tags/
+Disallow: /img/
+Disallow: /links/
+Disallow: /contact/
+Disallow: /about-hugo/
+Disallow: /archives/
+Disallow: /page/
+Disallow: /post/
+
+Sitemap: https://cicur.github.io/sitemap.xml
