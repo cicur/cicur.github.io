@@ -2,22 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://cicur.github.io/categories/</loc>
+    <lastmod>2022-04-30T14:28:36+08:00</lastmod>
+  </url><url>
+    <loc>https://cicur.github.io/</loc>
+    <lastmod>2022-04-30T14:28:36+08:00</lastmod>
+  </url><url>
+    <loc>https://cicur.github.io/tags/linux/</loc>
+    <lastmod>2022-04-30T14:28:36+08:00</lastmod>
+  </url><url>
+    <loc>https://cicur.github.io/post/</loc>
+    <lastmod>2022-04-30T14:28:36+08:00</lastmod>
+  </url><url>
+    <loc>https://cicur.github.io/tags/</loc>
+    <lastmod>2022-04-30T14:28:36+08:00</lastmod>
+  </url><url>
+    <loc>https://cicur.github.io/categories/technology/</loc>
+    <lastmod>2022-04-30T14:28:36+08:00</lastmod>
+  </url><url>
+    <loc>https://cicur.github.io/tags/ubuntu/</loc>
+    <lastmod>2022-04-30T14:28:36+08:00</lastmod>
+  </url><url>
+    <loc>https://cicur.github.io/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/</loc>
+    <lastmod>2022-04-30T14:28:36+08:00</lastmod>
+  </url><url>
     <loc>https://cicur.github.io/tags/announcement/</loc>
     <lastmod>2022-03-12T15:13:48+08:00</lastmod>
   </url><url>
     <loc>https://cicur.github.io/categories/announcement/</loc>
-    <lastmod>2022-03-12T15:13:48+08:00</lastmod>
-  </url><url>
-    <loc>https://cicur.github.io/categories/</loc>
-    <lastmod>2022-03-12T15:13:48+08:00</lastmod>
-  </url><url>
-    <loc>https://cicur.github.io/</loc>
-    <lastmod>2022-03-12T15:13:48+08:00</lastmod>
-  </url><url>
-    <loc>https://cicur.github.io/post/</loc>
-    <lastmod>2022-03-12T15:13:48+08:00</lastmod>
-  </url><url>
-    <loc>https://cicur.github.io/tags/</loc>
     <lastmod>2022-03-12T15:13:48+08:00</lastmod>
   </url><url>
     <loc>https://cicur.github.io/p/%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E5%B7%B2%E6%9B%B4%E6%8D%A2/</loc>

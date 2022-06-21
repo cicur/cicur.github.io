@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='本篇教程为在有多个硬盘的Windows 10系统的电脑中安装Ubuntu双系统的教程。'><title>Ubuntu 22.04 LTS 安装（Windows 10 双系统）</title>
+
+<link rel='canonical' href='https://cicur.github.io/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/'>
+
+<link rel="stylesheet" href="/scss/style.min.bbcfef3c56489f1f37b552146da519e6b6a74a4c92792bcc512c78e2f55f25e1.css"><meta property='og:title' content='Ubuntu 22.04 LTS 安装（Windows 10 双系统）'>
+<meta property='og:description' content='本篇教程为在有多个硬盘的Windows 10系统的电脑中安装Ubuntu双系统的教程。'>
+<meta property='og:url' content='https://cicur.github.io/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/'>
+<meta property='og:site_name' content='Cicur&#39;s Site'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Linux' /><meta property='article:tag' content='Ubuntu' /><meta property='article:published_time' content='2022-04-30T14:28:36&#43;08:00'/><meta property='article:modified_time' content='2022-04-30T14:28:36&#43;08:00'/>
+<meta name="twitter:title" content="Ubuntu 22.04 LTS 安装（Windows 10 双系统）">
+<meta name="twitter:description" content="本篇教程为在有多个硬盘的Windows 10系统的电脑中安装Ubuntu双系统的教程。">
+    
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H3MBPSFHJ2"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-H3MBPSFHJ2', { 'anonymize_ip': false });
+}
+</script>
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?2904849199f6269eb5d27d6188d62674";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+    
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu1194ab23cbc85a327d79051ae8ed8eb7_411773_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🥬</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Cicur&#39;s Site</a></h1>
+            <h2 class="site-description">In solitude, <br />where we are least alone.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/cicur'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://cicur.github.io/index.xml'
+                        target="_blank"
+                        title="RSS"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/tags/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11 3L20 12a1.5 1.5 0 0 1 0 2L14 20a1.5 1.5 0 0 1 -2 0L3 11v-4a4 4 0 0 1 4 -4h4" />
+  <circle cx="9" cy="9" r="2" />
+</svg>
+
+
+
+                
+                <span>Tags</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+
+        
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/technology/" >
+                Technology
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/">Ubuntu 22.04 LTS 安装（Windows 10 双系统）</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            本篇教程为在有多个硬盘的Windows 10系统的电脑中安装Ubuntu双系统的教程。
+        </h3>
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Apr 30, 2022 14:28 CST</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 5 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="一检查电脑信息">一、检查电脑信息</h1>
+<h2 id="1查看bios模式">1.查看BIOS模式</h2>
+<p>按<kbd>Win</kbd>+<kbd>R</kbd>打开“运行”，输入<code>msinfo32</code>，<kbd>Enter</kbd>，可查看当前BIOS模式，如图。<br /></p>
+<p><img src="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/BIOS_orig.png"
+	width="514"
+	height="138"
+	srcset="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/BIOS_orig_hud2ef429e7dffd89aac22b5eba49e4612_9980_480x0_resize_box_3.png 480w, /p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/BIOS_orig_hud2ef429e7dffd89aac22b5eba49e4612_9980_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="372"
+		data-flex-basis="893px"
+	
+></p>
+<p>如果这里显示的是UEIF可以直接跳转到<a class="link" href="#%e4%ba%8c%e5%88%b6%e4%bd%9c%e7%b3%bb%e7%bb%9f%e7%9b%98" >二、制作系统盘</a>。<br />
+这台电脑比较老旧，检查发现当前BIOS模式为传统MBR模式，我们需要将其改为UEFI。</p>
+<h2 id="2-修改bios模式">2. 修改BIOS模式</h2>
+<p>转换前需要注意BIOS须支持UEIF引导，要转换的盘主分区不超过三个，没有打开BitLocker加密，且系统在1703以上。
+这里是技嘉的主板，支持UEFI引导。</p>
+<p><img src="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/BIOS.png"
+	width="4032"
+	height="3024"
+	srcset="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/BIOS_hu782b3408bc78a74c94fed0ea7fb828d8_2555159_480x0_resize_box_3.png 480w, /p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/BIOS_hu782b3408bc78a74c94fed0ea7fb828d8_2555159_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+></p>
+<p>按住<kbd>Shift</kbd>并点击重启，点击“高级启动”，“命令提示符”。输入<code>mbr2gpt /validate</code>验证，若显示<code>MBR2GPT: Validation completed successfully</code>，说明可以转换。输入<code>mbr2gpt /convert</code>转换。在BIOS中改为UEIF引导可正常进入系统。</p>
+<p>重启后再次打开“运行”，输入<code>msinfo32</code>，发现BIOS模式已改为UEIF</p>
+<p><img src="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/BIOS_after.png"
+	width="500"
+	height="134"
+	srcset="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/BIOS_after_huc531d2112720b00d4bccd6bd101b0a58_9654_480x0_resize_box_3.png 480w, /p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/BIOS_after_huc531d2112720b00d4bccd6bd101b0a58_9654_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="373"
+		data-flex-basis="895px"
+	
+></p>
+<h1 id="二制作系统盘">二、制作系统盘</h1>
+<h2 id="准备">准备：</h2>
+<ul>
+<li><a class="link" href="https://cn.ubuntu.com/download/desktop"  target="_blank" rel="noopener"
+    >Ubuntu系统镜像</a></li>
+<li>刻录软件，官方推荐的是<a class="link" href="https://www.balena.io/etcher/"  target="_blank" rel="noopener"
+    >balenaEtcher</a>，但国内下载比较慢，我传了一份在百度网盘（见下），也可使用UltraISO</li>
+<li>空闲U盘（4GB以上）</li>
+</ul>
+<h2 id="制作">制作</h2>
+<h3 id="balenaetcher">balenaEtcher</h3>
+<blockquote>
+<p><a class="link" href="https://pan.baidu.com/s/11hZwIfDRDT9BhhaIB4ilSA"  target="_blank" rel="noopener"
+    >网盘链接</a> <br />
+提取码：4j5j</p>
+</blockquote>
+<p>上面的链接中，portable是免安装的，setup是安装版。</p>
+<p>打开balenaEtcher，选择Flash from file</p>
+<p><img src="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/balenaEtcher_1.png"
+	width="1201"
+	height="760"
+	srcset="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/balenaEtcher_1_huba0fe3af91884b54414130ce7b93f01c_44586_480x0_resize_box_3.png 480w, /p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/balenaEtcher_1_huba0fe3af91884b54414130ce7b93f01c_44586_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="158"
+		data-flex-basis="379px"
+	
+></p>
+<p>选择下载的iso镜像，打开</p>
+<p><img src="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/balenaEtcher_2.png"
+	width="1062"
+	height="711"
+	srcset="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/balenaEtcher_2_hubb024dbb4e18f4530e796ba8623e51b7_58302_480x0_resize_box_3.png 480w, /p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/balenaEtcher_2_hubb024dbb4e18f4530e796ba8623e51b7_58302_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="149"
+		data-flex-basis="358px"
+	
+></p>
+<p>点击Select target，选择要写入的U盘，点击Select</p>
+<p><img src="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/balenaEtcher_3.png"
+	width="1204"
+	height="760"
+	srcset="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/balenaEtcher_3_hu20d2685f227f1784d7df59835ccff3c9_55710_480x0_resize_box_3.png 480w, /p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/balenaEtcher_3_hu20d2685f227f1784d7df59835ccff3c9_55710_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="158"
+		data-flex-basis="380px"
+	
+></p>
+<p>确认无误后点击Flash!</p>
+<p><img src="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/balenaEtcher_4.png"
+	width="1204"
+	height="760"
+	srcset="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/balenaEtcher_4_hu0a494413e405fe375fdb352381af9f16_45485_480x0_resize_box_3.png 480w, /p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/balenaEtcher_4_hu0a494413e405fe375fdb352381af9f16_45485_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="158"
+		data-flex-basis="380px"
+	
+></p>
+<p>等待写入完成</p>
+<p><img src="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/balenaEtcher_5.png"
+	width="1204"
+	height="760"
+	srcset="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/balenaEtcher_5_hueab8b2e06bfe6836c3cd203fe39a18c8_94982_480x0_resize_box_3.png 480w, /p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/balenaEtcher_5_hueab8b2e06bfe6836c3cd203fe39a18c8_94982_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="158"
+		data-flex-basis="380px"
+	
+>
+<img src="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/balenaEtcher_6.png"
+	width="1204"
+	height="760"
+	srcset="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/balenaEtcher_6_hu89b554ee890f3c236adb7bff5d4bf27c_96285_480x0_resize_box_3.png 480w, /p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/balenaEtcher_6_hu89b554ee890f3c236adb7bff5d4bf27c_96285_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="158"
+		data-flex-basis="380px"
+	
+></p>
+<p>balenaEtcher写入后U盘文件系统是isofs，在Windows上看不见内容。</p>
+<h3 id="ultraiso">UltraISO</h3>
+<blockquote>
+<p>本段图片来源于网络，文件名应为ubuntu-22.04-desktop-amd64.iso</p>
+</blockquote>
+<p>安装并打开UltraISO，插上U盘。（如有需要请备份U盘，之后的步骤需要格式化）选择文件，找到你的Ubuntu镜像所在的目录，选择镜像文件，双击打开，如图。</p>
+<p><img src="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/UltraISO_1.png"
+	width="693"
+	height="511"
+	srcset="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/UltraISO_1_huceef5a5455656c4ee4fe4a560fa112ce_135460_480x0_resize_box_3.png 480w, /p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/UltraISO_1_huceef5a5455656c4ee4fe4a560fa112ce_135460_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="135"
+		data-flex-basis="325px"
+	
+>
+<img src="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/UltraISO_2.png"
+	width="693"
+	height="511"
+	srcset="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/UltraISO_2_hu04becb9f0e1af9fbe13e86ef09cdc2a6_175276_480x0_resize_box_3.png 480w, /p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/UltraISO_2_hu04becb9f0e1af9fbe13e86ef09cdc2a6_175276_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="135"
+		data-flex-basis="325px"
+	
+></p>
+<p>在菜单栏选择&quot;启动&quot;，选择&quot;写入硬盘映像&quot;，如图。</p>
+<p><img src="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/UltraISO_3.png"
+	width="765"
+	height="429"
+	srcset="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/UltraISO_3_hu17e9490716e7f4f80699f579629c581b_331432_480x0_resize_box_3.png 480w, /p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/UltraISO_3_hu17e9490716e7f4f80699f579629c581b_331432_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="178"
+		data-flex-basis="427px"
+	
+></p>
+<p>进入如下界面：</p>
+<p><img src="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/UltraISO_4.png"
+	width="865"
+	height="797"
+	srcset="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/UltraISO_4_hu3b7a5e3635bbb4502431240fa1e7eb28_200513_480x0_resize_box_3.png 480w, /p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/UltraISO_4_hu3b7a5e3635bbb4502431240fa1e7eb28_200513_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="108"
+		data-flex-basis="260px"
+	
+></p>
+<p>检查如下内容：</p>
+<ul>
+<li>硬盘驱动器是否是要刻录的U盘</li>
+<li>映像文件是否是Ubuntu镜像；</li>
+</ul>
+<p>若确认无误，选择格式化。待U盘格式化完毕之后，选择写入。<br />等待写入完毕。</p>
+<h1 id="三创建空闲分区">三、创建空闲分区</h1>
+<p>右击开始菜单，点击“磁盘管理”</p>
+<p><img src="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/Disk_1.png"
+	width="262"
+	height="629"
+	srcset="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/Disk_1_hue28b2a1b46de28c920d6dd79f2410d90_30226_480x0_resize_box_3.png 480w, /p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/Disk_1_hue28b2a1b46de28c920d6dd79f2410d90_30226_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="41"
+		data-flex-basis="99px"
+	
+></p>
+<p>如果电脑是<strong>多硬盘</strong>首先在C盘分出500MB的空白分区用来安装Ubuntu的启动项（空间足够可以分1GB），然后再在另一块硬盘选择最后一个分区（即一个Windows磁盘管理中每行最右侧的分区），右击，选择压缩卷，如下图，输入压缩空间量，单位为MB,如果空间充足，建议至少分出80GB或100GB，空间不足可以分60G。</p>
+<p><img src="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/Disk_2.png"
+	width="530"
+	height="391"
+	srcset="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/Disk_2_hu789026c23266d922c9a9245190f53a6d_23347_480x0_resize_box_3.png 480w, /p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/Disk_2_hu789026c23266d922c9a9245190f53a6d_23347_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="135"
+		data-flex-basis="325px"
+	
+></p>
+<p>如果电脑是<strong>单硬盘</strong>，选择最后一个分区，右击，选择压缩卷，输入压缩空间量，如果空间充足，建议至少分出80GB或100GB，空间不足可以分60GB。</p>
+<blockquote>
+<p>为什么要选择最后一个分区压缩卷<br />
+Windows和Ubuntu的文件存储格式是不一样的，我们分区的操作只是将磁盘分了一部分给Ubuntu，事实上两个系统还是在共用一块磁盘。为防止存储格式不同两个系统可能的相互影响，我们选择最后一个分区压缩卷。<sup><a href="https://www.cnblogs.com/masbay/p/10844857.html" target="_blank">[来源]</a></sup></p>
+</blockquote>
+<h1 id="四安装系统">四、安装系统</h1>
+<p>插好系统盘，重启电脑，进入BIOS（各厂商进入BIOS的快捷键及BIOS设置项不相同，请自行搜索），关闭Secure Boot，然后保存更改。在Boot页面下方启动项选择USB启动，回车，如果顺利进入安装页面，继续往下做；如果点击USB启动项无法进入，保存并退出，电脑会重启，根据自己电脑按相应的键进boot manager，找到USB启动项，回车即可进入。</p>
+<p>进入此界面，选择Try or Installl Ubuntu。</p>
+<p><img src="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/install_1.png"
+	width="4032"
+	height="3024"
+	srcset="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/install_1_hua27b35091db291c0f55d31ea4b4c4dac_1554989_480x0_resize_box_3.png 480w, /p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/install_1_hua27b35091db291c0f55d31ea4b4c4dac_1554989_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+></p>
+<p>左侧语言栏可以下拉选择中文，点击安装Ubuntu</p>
+<p><img src="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/install_2.png"
+	width="4032"
+	height="3024"
+	srcset="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/install_2_hufbeaffccba5f03b80b4a901d629bdafa_3526951_480x0_resize_box_3.png 480w, /p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/install_2_hufbeaffccba5f03b80b4a901d629bdafa_3526951_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+></p>
+<p>键盘布局选中文即可</p>
+<p><img src="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/install_3.png"
+	width="4032"
+	height="3024"
+	srcset="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/install_3_hu038dd066ba125d5d7a9fb666c123e957_4945185_480x0_resize_box_3.png 480w, /p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/install_3_hu038dd066ba125d5d7a9fb666c123e957_4945185_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+></p>
+<p>选择安装方式（可以勾选“为图形或无线硬件，以及其他媒体安装第三方软件”）</p>
+<p><img src="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/install_4.png"
+	width="4032"
+	height="3024"
+	srcset="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/install_4_hu17b369311396071b7436d2d982cd5937_4953032_480x0_resize_box_3.png 480w, /p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/install_4_hu17b369311396071b7436d2d982cd5937_4953032_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+></p>
+<p>系统发现Windows Boot Manager，选择其他选项。</p>
+<p><img src="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/install_5.png"
+	width="4032"
+	height="3024"
+	srcset="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/install_5_hu8519fdc60d876fe6cd3970c232f83be0_4933596_480x0_resize_box_3.png 480w, /p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/install_5_hu8519fdc60d876fe6cd3970c232f83be0_4933596_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+></p>
+<p>进入分区界面</p>
+<p><img src="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/install_6.png"
+	width="4032"
+	height="3024"
+	srcset="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/install_6_hu85dc52a7f64ad5b0acbdf96b559c582b_5640926_480x0_resize_box_3.png 480w, /p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/install_6_hu85dc52a7f64ad5b0acbdf96b559c582b_5640926_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+></p>
+<p>首先简单了解一下Linux的分区表示。在Linux中设备都在<code>/dev</code>目录下，硬盘用<code>sdx</code>表示，<code>x</code>为依次为a, b, c…，在硬盘后面加上1, 2, 3…表示对应的分区。故第一个硬盘为<code>/dev/sda</code>，第一个硬盘的第一个分区为<code>/dev/sda1</code>。</p>
+<p>点击空闲盘符（不知道为什么我分区中间会空一点，注意看好大小，不是只有一两MB的分区），点击&quot;+&ldquo;分区</p>
+<p><em>只有<code>/</code>是必须分区的，其它如果没有必要可以不独立分区，按默认挂在<code>/</code>下就行。</em></p>
+<p><strong>（欢迎指正）</strong></p>
+<ol>
+<li><code>/</code>：这是Ubuntu的根目录,大小视情况而定，如果<code>/home</code>和<code>/usr</code>单独分区了，30~50GB即可，主分区，空间起始位置，用于&quot;Ext4日志文件系统&rdquo;，挂载点<code>/</code></li>
+<li><code>swap</code>：交换空间。作用类似虚拟内存。建议设置独立分区，大小可参考<a class="link" href="https://help.ubuntu.com/community/SwapFaq"  target="_blank" rel="noopener"
+    >Ubuntu官方建议</a>，一般2~4GB即可，如果需要休眠需要分配较大空间。逻辑分区，空间起始位置，用于<code>swap</code></li>
+<li><code>home</code>: 用户目录。每个用户会生成一个文件夹，存放用户文件。可设置独立分区，分区的大小取决于剩下的空间。主分区，空间起始位置，用于&quot;ext4日志文件系统&quot;，挂载点<code>/home</code></li>
+<li><code>usr</code>：应用分区。很多安装的应用都会放在该分区，如果将在Ubuntu上安装多种应用程序，可以<strong>考虑</strong>独立分区，大小看程序数量，100G以内吧。主分区，空间起始位置，用于&quot;ext4日志文件系统&quot;，挂载点<code>/usr</code></li>
+</ol>
+<p>在分区页面下方有“安装启动引导器的设备”，注意选择含有efi分区的硬盘。如上图，我的<code>dev/sda2</code>是efi分区，故选择<code>/dev/sda</code>。</p>
+<p>确认无误后，点击“现在安装”。</p>
+<p>地区选上海即可</p>
+<p><img src="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/install_7.png"
+	width="4032"
+	height="3024"
+	srcset="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/install_7_hu3abe288f7fe6de301dacd29c4585bb3e_5446661_480x0_resize_box_3.png 480w, /p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/install_7_hu3abe288f7fe6de301dacd29c4585bb3e_5446661_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+></p>
+<p>创建用户</p>
+<p><img src="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/install_8.png"
+	width="4032"
+	height="3024"
+	srcset="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/install_8_hua6f18675abe7e80d70415e6eac80d674_5408889_480x0_resize_box_3.png 480w, /p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/install_8_hua6f18675abe7e80d70415e6eac80d674_5408889_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+></p>
+<p>等待安装完成</p>
+<p><img src="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/install_9.png"
+	width="4032"
+	height="3024"
+	srcset="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/install_9_huf11f5e91863d8fffe1b98d83cdcd9d97_2965519_480x0_resize_box_3.png 480w, /p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/install_9_huf11f5e91863d8fffe1b98d83cdcd9d97_2965519_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+></p>
+<p>完成后会提示重启，点击“现在重启”。</p>
+<p><img src="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/install_10.png"
+	width="4032"
+	height="3024"
+	srcset="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/install_10_hud96e8c0a6733909d27827a5379713687_6371609_480x0_resize_box_3.png 480w, /p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/install_10_hud96e8c0a6733909d27827a5379713687_6371609_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+></p>
+<p>系统提示将U盘拔出，然后按回车。</p>
+<p><img src="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/install_11.png"
+	width="4032"
+	height="3024"
+	srcset="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/install_11_hua24400189a3c45affaf4ffb1c87904e6_1238667_480x0_resize_box_3.png 480w, /p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/install_11_hua24400189a3c45affaf4ffb1c87904e6_1238667_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+></p>
+<p>进入以下界面，第一个就是Ubuntu，第二个是Ubuntu的高级选项，第三个是Windows，默认进第一个Ubuntu。</p>
+<p><img src="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/install_12.png"
+	width="4032"
+	height="3024"
+	srcset="/p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/install_12_hu2a4ec72e471e57eea8b5dfc6d6b5f927_1562438_480x0_resize_box_3.png 480w, /p/ubuntu-22.04-lts-%E5%AE%89%E8%A3%85windows-10-%E5%8F%8C%E7%B3%BB%E7%BB%9F/install_12_hu2a4ec72e471e57eea8b5dfc6d6b5f927_1562438_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+></p>
+<p>安装完成。</p>
+<h2 id="常见问题">常见问题</h2>
+<p>如果安装过程或系统启动片刻后卡死无法操作，很有可能是电脑有特殊独立显卡，Ubuntu下缺少驱动导致，可以尝试参考以下文章解决：</p>
+<ul>
+<li><a class="link" href="https://www.cnblogs.com/masbay/p/10718514.html"  target="_blank" rel="noopener"
+    >ubuntu双系统启动时卡死解决办法</a></li>
+<li><a class="link" href="https://blog.csdn.net/qq_41972927/article/details/88580898"  target="_blank" rel="noopener"
+    >双系统Ubuntu 18.04安装时卡死</a></li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/linux/">Linux</a>
+        
+            <a href="/tags/ubuntu/">Ubuntu</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"integrity="sha384-&#43;XBljXPPiv&#43;OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <script src="https://cdn.jsdelivr.net/npm/twikoo@1.5.9/dist/twikoo.min.js" integrity="sha384-9LZFFK6wRLXJEG/tXUol5S94WRZgAxaqFtzpUuM4HYuTg7pnKTkra3sFOJ1yPdtx" crossorigin="anonymous"></script>
+<div id="tcomment"></div>
+<style>
+    .twikoo {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+    :root[data-scheme="dark"] {
+        --twikoo-body-text-color-main: rgba(255, 255, 255, 0.9);
+        --twikoo-body-text-color: rgba(255, 255, 255, 0.7);
+    }
+    .twikoo .el-input-group__prepend,
+    .twikoo .tk-action-icon,
+    .twikoo .tk-time,
+    .twikoo .tk-comments-count {
+        color: var(--twikoo-body-text-color);
+    }
+    .twikoo .el-input__inner,
+    .twikoo .el-textarea__inner,
+    .twikoo .tk-preview-container,
+    .twikoo .tk-content,
+    .twikoo .tk-nick,
+    .twikoo .tk-send {
+        color: var(--twikoo-body-text-color-main);
+    }
+    .twikoo .el-button{
+        color: var(--twikoo-body-text-color)!important;
+    }
+</style><script>
+    twikoo.init({
+        envId: 'https:\/\/twikoo-cicur.vercel.app\/',
+        el: '#tcomment',})
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2022 Cicur&#39;s Site
+    </section>
+    
+    <section class="powerby">
+        
+            All rights reserved. <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.11.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
