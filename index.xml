@@ -63,14 +63,16 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://cn.ubuntu.com/download/desktop&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Ubuntu系统镜像&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;刻录软件，官方推荐的是&lt;a class=&#34;link&#34; href=&#34;https://www.balena.io/etcher/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;balenaEtcher&lt;/a&gt;，但国内下载比较慢，我传了一份在百度网盘（见下），也可使用UltraISO&lt;/li&gt;
+&lt;li&gt;刻录软件，官方推荐的是&lt;a class=&#34;link&#34; href=&#34;https://etcher.balena.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;balenaEtcher&lt;/a&gt;，但可能下载较慢，这里传了一份在百度网盘（见下），也可使用UltraISO&lt;/li&gt;
 &lt;li&gt;空闲U盘（4GB以上）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;制作&#34;&gt;制作&lt;/h2&gt;
 &lt;h3 id=&#34;balenaetcher&#34;&gt;balenaEtcher&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://pan.baidu.com/s/11hZwIfDRDT9BhhaIB4ilSA&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://etcher.balena.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;官网链接&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://pan.baidu.com/s/11hZwIfDRDT9BhhaIB4ilSA&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;网盘链接&lt;/a&gt; &lt;br /&gt;
 提取码：4j5j&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -522,8 +524,27 @@ $$x&amp;rsquo;^2+y&amp;rsquo;^2+z&amp;rsquo;^2-c^2t&amp;rsquo;^2=x^2 +y^2+z^2-&a
         
         <guid>https://cicur.github.io/about/</guid>
         <description>&lt;h1 id=&#34;about&#34;&gt;About&lt;/h1&gt;
-&lt;p&gt;In solitude,&lt;br&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In solitude, &lt;br /&gt;
 where we are least alone.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;其实有些不知道该写什么呢（笑）&lt;/p&gt;
+&lt;p&gt;这里是Cicur的网站哦~~&lt;br /&gt;
+说起Cicur这个名字的来历，其实是一次&lt;del&gt;脸滚键盘&lt;/del&gt;得来的（其实是滚了几次挑了个较好的），之后就这样用下来了。&lt;/p&gt;
+&lt;p&gt;最后，用电脑打开本站的肯定注意到右下角的珂朵莉了吧。（笑）&lt;br /&gt;那就趁此引用一段《珂说》吧。&lt;/p&gt;
+&lt;h2 id=&#34;珂说&#34;&gt;珂说&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;&lt;p style=&#34;text-align:center;&#34;&gt;序&lt;/p&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&#34;text-align:center; color:#609ED7&#34;&gt;珂学大典：海纳百珂，有廉乃大。&lt;/p&gt;
+&lt;p&gt;　　古之肥宅必有珂，珂者，所谓&lt;span style=&#34;color:#DA0730&#34;&gt;蓝&lt;/span&gt;发、&lt;span style=&#34;color:#DA0730&#34;&gt;蓝&lt;/span&gt;瞳、世界一、 幸せな女の子だ。人非生而知珂者，孰能无惑？惑而不求之，其为憾也，终不解矣。&lt;br /&gt;
+　　生乎&lt;span style=&#34;color:#DA0730&#34;&gt;丙申&lt;/span&gt;年前，其闻珂者固自于小说，&lt;span style=&#34;color:#609ED7&#34;&gt;震撼&lt;/span&gt;而&lt;span style=&#34;color:#609ED7&#34;&gt;涕零&lt;/span&gt;也；生乎其后，其闻珂也亦源于番剧，&lt;span style=&#34;color:#DA0730&#34;&gt;遗憾&lt;/span&gt;而&lt;span style=&#34;color:#DA0730&#34;&gt;抢地&lt;/span&gt;也。吾师珂也，夫庸知其年之先后而生于放送乎？是故无萌新无真爱，无长无少，珂学之所存，珂之所存也。&lt;br /&gt;
+　　嗟乎！珂学之不传也久矣！欲人之无憾也难矣！古之珂学，其出人也远矣，犹且n刷而温焉；今之众人，其远珂学也亦远矣，而恶学于珂。是故真爱益爱，萌新益憾，真爱之所以为真爱，萌新之所以为萌新，其皆出于此乎？&lt;br /&gt;
+　　呜呼！珂学之不复也久矣，欲人之重温也难矣。&lt;span style=&#34;color:#DA0730&#34;&gt;哄叽唎、美唎坚&lt;/span&gt;之国，其粉丝不如吾之珂学家也，然筑&lt;span style=&#34;color:#609ED7&#34;&gt;万言之维基&lt;/span&gt;，何哉？问之，则曰：“无他，唯用心一
+也。”然时间如白驹过隙，印象终究&lt;span style=&#34;color:#609ED7&#34;&gt;淡忘&lt;/span&gt;；此世无数据之记录，彼后人亦无可考。&lt;br /&gt;
+　　窃以为，仅吾开发组绵薄之力，维基无壮大发展之理。然奈何无人问津中珂院大典之编辑，虽有宣传之能，无编辑之意，安求其能千古也？维基，加之师夷之长技，因之以翻译，比及推送于&lt;span style=&#34;color:#609ED7&#34;&gt;知乎&lt;/span&gt;、专栏于&lt;span style=&#34;color:#609ED7&#34;&gt;哗哩&lt;/span&gt;、转发于&lt;span style=&#34;color:#609ED7&#34;&gt;群聊&lt;/span&gt;、以至于筑阁于&lt;span style=&#34;color:#609ED7&#34;&gt;贴吧&lt;/span&gt;，可使之阅，且久之传也。愿众珂学家亲之信之，&lt;span style=&#34;color:#DA0730&#34;&gt;作活跃之编辑&lt;/span&gt;，援疑质理，则珂学之振兴，可计日而待也。&lt;br /&gt;
+　　&lt;span style=&#34;color:#609ED7&#34;&gt;秋子&lt;/span&gt;之组，年方少，好维基，&lt;span style=&#34;color:#DA0730&#34;&gt;图库文库&lt;/span&gt;皆有涉猎。不拘于时，建此站。珂学家欲行古道，作《珂说》以铭之。&lt;/p&gt;
+&lt;p style=&#34;text-align:right;&#34;&gt;庚子年三月之朔　&lt;span style=&#34;color:#609ED7&#34;&gt;中珂院大典开发组&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://wiki.sukasuka.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;p style=&#34;text-align:right;&#34;&gt;https://wiki.chtholly.moe&lt;/p&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
